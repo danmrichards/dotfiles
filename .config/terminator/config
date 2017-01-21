@@ -11,11 +11,10 @@
 [plugins]
 [profiles]
   [[default]]
-    allow_bold = False
-    background_color = "#1d1f21"
-    cursor_color = "#c5c8c6"
-    font = Inconsolata 13
-    foreground_color = "#c5c8c6"
-    palette = "#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff:#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    background_color = "#27292c"
+    background_image = None
+    font = Inconsolata Medium 13
+    foreground_color = "#d0d2d1"
+    palette = "#000000:#d77c79:#c2c77b:#f4cf87:#93b2ca:#c0a7c7:#9ac9c4:#ffffff:#000000:#d77c79:#c2c77b:#f4cf87:#93b2ca:#c0a7c7:#9ac9c4:#ffffff"
     show_titlebar = False
     use_system_font = False
