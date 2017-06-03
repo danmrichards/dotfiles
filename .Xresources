@@ -1,1 +1,23 @@
-Xft.dpi: 192
+! Set the curser size
+Xcursor.size:  68
+
+! DPI scaling and font bits.
+Xft.dpi:        200
+Xft.autohint:   0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting:    1
+Xft.antialias:  1
+
+! Rofi settings.
+rofi.color-enabled: true
+rofi.color-window: #27292c, #00bcd4, #0097a7
+rofi.color-normal: #27292c, #e1f5fe, #424242, #00bcd4, #ffeefc
+rofi.color-active: #27292c, #c05c47, #424242, #c05c47, #e1f5fe
+rofi.color-urgent: #27292c, #e4b226, #424242, #e4b226, #e1f5fe
+rofi.width: 1400
+rofi.padding: 40
+rofi.font: Droid Sans 18
+rofi.bw: 2
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
