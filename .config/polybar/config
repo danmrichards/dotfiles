@@ -33,8 +33,8 @@ padding-right = 3
 module-margin-left = 2.5
 module-margin-right = 2.5
 
-font-0 = Hack:fontformat=truetype:size=16;1
-font-1 = Hack:fontformat=truetype:size=16;1
+font-0 = Droid Sans:fontformat=truetype:size=16;1
+font-1 = Droid Sans:fontformat=truetype:size=16;1
 font-2 = FontAwesome:fontformat=truetype:size=16;1
 
 modules-left = i3 xwindow
@@ -96,6 +96,8 @@ type = internal/volume
 format-muted-background = ${colors.background}
 format-volume-background = ${colors.background}
 format-volume = <label-volume> <bar-volume>
+label-volume = Volume:
+label-volume-foreground = ${colors.colour_1}
 label-muted = Muted
 
 bar-volume-width = 15
@@ -205,8 +207,8 @@ module-margin-top = 1.0
 module-margin-left = 2.5
 module-margin-right = 2.5
 
-font-0 = Hack:fontformat=truetype:size=16;1
-font-1 = Hack:fontformat=truetype:size=16;1
+font-0 = Droid Sans:fontformat=truetype:size=16;1
+font-1 = Droid Sans:fontformat=truetype:size=16;1
 font-2 = FontAwesome:fontformat=truetype:size=16;1
 
 modules-left = cpu memory
