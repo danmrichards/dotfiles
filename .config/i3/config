@@ -164,8 +164,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Keyboard screen brightness controls.
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo /opt/danrichards/brightness +20
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo /opt/danrichards/brightness -20
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo /opt/danrichards/brightness +10
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo /opt/danrichards/brightness -10
 
 # Keyboard LED brightness controls.
 bindsym XF86KbdBrightnessUp exec --no-startup-id sudo /opt/danrichards/kbd_backlight +20
@@ -189,11 +189,11 @@ gaps outer 0
 
 # Window borders.
 hide_edge_borders both
-client.focused          #00bcd4 #00bcd4 #00bcd4 #00bcd4
-client.focused_inactive #006064 #006064 #00bcd4 #006064
-client.unfocused        #006064 #006064 #00bcd4 #006064
-client.urgent           #006064 #006064 #006064 #006064
-client.placeholder      #006064 #006064 #006064 #006064
+client.focused          #00bcd4 #00bcd4 #ffffff #00bcd4
+client.focused_inactive #006064 #006064 #444444 #006064
+client.unfocused        #006064 #006064 #0097a7 #006064
+client.urgent           #006064 #006064 #ffffff #006064
+client.placeholder      #006064 #006064 #ffffff #006064
 
 # Turn off edge scrolling
 exec synclient HorizEdgeScroll=0 VertEdgeScroll=0
