@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/dan/.vim'
 let g:netrw_dirhist_2='/Users/dan/Sites/d7-testbed/docroot/sites/all/modules/custom/couchdb_sync'
 let g:netrw_dirhist_3='/Users/dan/.nvim'
+let g:netrw_dirhist_4='/home/dan/.config/conky'

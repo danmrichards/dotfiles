@@ -34,9 +34,9 @@ set wmh=0 " reduces splits to a single line
 set exrc
 set secure
 " Enable syntax highlighting
-syntax on
+" syntax on
 " Highlight current line
-set cursorline
+" set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
 " Enable line numbers
@@ -55,8 +55,6 @@ set laststatus=2
 " Respect modeline in files
 set modeline
 set modelines=4
-" Enable mouse in all modes
-set mouse=a
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.

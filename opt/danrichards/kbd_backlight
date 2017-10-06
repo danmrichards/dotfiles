@@ -1,0 +1,50 @@
+#!/bin/bash
+
+############################################################
+# Name:        Keyboard Backlight
+# Description: Alter the keyboard backlight  level for a
+#              Macbook Pro running Ubuntu.
+# Author:      Dan Richards
+# Date:        02/06/2017
+###########################################################
+
+###################################################
+# Displays usage information for this shell script.
+###################################################
+function usage {
+  echo "Usage: kbd_backlight [+/-]<backlight_level>"
+  exit
+}
+
+# Check for the correct number of arguments.
+if [ "$#" -ne 1 ]
+then
+    usage
+fi
+
+# How much to alter the backlight by.
+change=$1
+
+# Get the maximum backlight value.
+max_backlight=$(cat /sys/class/leds/smc::kbd_backlight/max_brightness)
+
+# Get the current backlight.
+backlight=$(cat /sys/class/leds/smc::kbd_backlight/brightness)
+
+# Calculate the new value that is requested.
+new_value=$(($backlight + $change))
+
+# If the new value is less than 0, we just set it to 0
+if (( $new_value < 0 )); then
+  let backlight=0
+elif  (($new_value > $max_backlight)); then
+  # If the new value is greater than max backlight, set it to max brightness.
+  let backlight=$max_backlight
+else
+  # If none of the above if-statements are true, just set it to the 
+  # new backlight value.
+  let backlight=$new_value
+fi
+
+# Now we can just echo the value into the backlight interface.
+echo $backlight > /sys/class/leds/smc::kbd_backlight/brightness

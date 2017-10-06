@@ -1,6 +1,3 @@
-! Set the curser size
-Xcursor.size:  68
-
 ! DPI scaling and font bits.
 Xft.dpi:        200
 Xft.autohint:   0
@@ -8,6 +5,8 @@ Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintslight
 Xft.hinting:    1
 Xft.antialias:  1
+Xcursor.theme:  Breeze-Obsidian
+Xcursor.size:   48
 
 ! Rofi settings.
 rofi.color-enabled: true

@@ -1,4 +1,5 @@
 [global_config]
+  borderless = True
 [keybindings]
 [layouts]
   [[default]]
@@ -12,8 +13,8 @@
 [profiles]
   [[default]]
     background_color = "#27292c"
-    background_image = None
-    font = Inconsolata Medium 13
+    cursor_color = "#d0d2d1"
+    font = Inconsolata Medium 14
     foreground_color = "#d0d2d1"
     palette = "#000000:#d77c79:#c2c77b:#f4cf87:#93b2ca:#c0a7c7:#9ac9c4:#ffffff:#000000:#d77c79:#c2c77b:#f4cf87:#93b2ca:#c0a7c7:#9ac9c4:#ffffff"
     show_titlebar = False

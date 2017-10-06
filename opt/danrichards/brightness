@@ -1,0 +1,50 @@
+#!/bin/bash
+
+###########################################################
+# Name:        Brightness
+# Description: Alter the brightness level for a Macbook Pro
+#              running Ubuntu.
+# Author:      Dan Richards
+# Date:        02/06/2017
+###########################################################
+
+###################################################
+# Displays usage information for this shell script.
+###################################################
+function usage {
+  echo "Usage: brightness [+/-]<brightness_level>"
+  exit
+}
+
+# Check for the correct number of arguments.
+if [ "$#" -ne 1 ]
+then
+    usage
+fi
+
+# How much to alter the brightness by.
+change=$1
+
+# Get the maximum brightness value.
+max_brightness=$(cat /sys/class/backlight/acpi_video0/max_brightness)
+
+# Get the current brightness.
+brightness=$(cat /sys/class/backlight/acpi_video0/brightness)
+
+# Calculate the new value that is requested.
+new_value=$(($brightness + $change))
+
+# If the new value is less than 10, we just set it to 10
+if (( $new_value < 10 )); then
+  let brightness=10
+elif  (($new_value > $max_brightness)); then
+  # If the new value is greater than max brightness, set it to max brightness.
+  let brightness=$max_brightness
+else
+  # If none of the above if-statements are true, just set it to the 
+  # new brightness value.
+  let brightness=$new_value
+fi
+
+# Now we can just echo the value into the brightness interface.
+echo $brightness > /sys/class/backlight/acpi_video0/brightness

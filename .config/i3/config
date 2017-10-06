@@ -216,4 +216,4 @@ exec xrdb -merge .Xresources
 # Startup scripts.
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/thumb-1920-601156.jpg  
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/tQ9B5vv.jpg
