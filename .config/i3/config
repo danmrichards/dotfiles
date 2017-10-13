@@ -154,9 +154,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Keyboard audio controls.
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
+bindsym XF86AudioMute exec amixer sset 'Master' toggle
 
 # Keyboard media player controls.
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -195,23 +195,8 @@ client.unfocused        #006064 #006064 #0097a7 #006064
 client.urgent           #006064 #006064 #ffffff #006064
 client.placeholder      #006064 #006064 #ffffff #006064
 
-# Turn off edge scrolling
-exec synclient HorizEdgeScroll=0 VertEdgeScroll=0
-
-# Turn off tap click (single finger, two finger, and 3 finger)
-exec synclient TapButton1=0 TapButton2=0 TapButton3=0
-
-# Turn on two finger horizontal scrolling.
-exec synclient HorizTwoFingerScroll=1
-
-# Disable touchpad while typing.
-exec syndaemon -i 1 -K -d
-
 # Start polybar.
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Xresouces.
-exec xrdb -merge .Xresources
 
 # Startup scripts.
 exec --no-startup-id nm-applet
