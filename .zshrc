@@ -95,3 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export GOPATH="/home/dan/code/go"
+export PATH="/usr/local/bin:$GOPATH/bin:~/.config/composer/vendor/bin:~/.gem/ruby/2.5.0/bin:$PATH"
