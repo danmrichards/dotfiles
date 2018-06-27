@@ -60,6 +60,9 @@ ZSH_THEME="dan"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  docker
+  sudo
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
