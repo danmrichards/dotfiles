@@ -178,9 +178,9 @@ bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh
 bindsym $alt+l exec /opt/danrichards/lock ~/.config/i3lock/material-icon-2155441_640.png
 
 # Disbable window titles.
-for_window [class="^.*"] border pixel 2
-new_window pixel 2
-new_float pixel 2
+for_window [class="^.*"] border pixel 1
+new_window pixel 1
+new_float pixel 1
 
 # Global gaps setting.
 gaps inner 20
